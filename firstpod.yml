@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkinstest
+  namespace: my-namespace
+  labels:
+    mypod: my_jenkins
+spec: 
+  containers:
+    - name: jenkins
+      image: jenkins/jenkins:latest
+    - name: tomcat
+      image: tomcat:latest
